@@ -398,9 +398,9 @@ public final class OkHttpURLConnection extends HttpURLConnection implements Call
     }
 
     OkHttpClient.Builder clientBuilder = client.newBuilder();
-    clientBuilder.interceptors().clear();
+    //clientBuilder.interceptors().clear();
     clientBuilder.interceptors().add(UnexpectedException.INTERCEPTOR);
-    clientBuilder.networkInterceptors().clear();
+    //clientBuilder.networkInterceptors().clear();
     clientBuilder.networkInterceptors().add(networkInterceptor);
 
     // Use a separate dispatcher so that limits aren't impacted. But use the same executor service!
